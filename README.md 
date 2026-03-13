@@ -1,0 +1,67 @@
+# SMEVCS - Smart Management of EV Charging Station
+
+A Java web application for managing Electric Vehicle Charging Stations built during undergrad.
+
+## Tech Stack
+- Java Servlets & JSP
+- MySQL Database
+- Apache Tomcat 9
+- Maven
+
+## Features
+- User Registration & Login
+- Admin Login & Dashboard
+- Manage Charging Slots (Add/Delete)
+- Search Slots by City
+- Book a Slot & Make Payment
+- View Booking & Payment History
+- Chatbot Support
+
+## Setup Instructions
+
+### 1. Prerequisites
+- Java 11
+- Maven
+- MySQL
+- Apache Tomcat 9
+
+### 2. Database Setup
+```sql
+mysql -u root
+source database/schema.sql
+```
+
+### 3. Configure Database
+Edit `src/main/java/com/connection/DBConnection.java`:
+```java
+public static String DBUSER = "root";
+public static String DBPASSWORD = "your_password";
+```
+
+### 4. Build the Project
+```bash
+mvn clean package
+```
+
+### 5. Deploy
+Copy the generated `target/SMEVCS.war` to Tomcat's `webapps/` folder and start Tomcat.
+
+## Admin Credentials
+- Email: admin@smevcs.com
+- Password: admin123
+
+## Project Structure
+```
+SMEVCS/
+├── src/
+│   └── main/
+│       ├── java/com/
+│       │   ├── bean/        # Data models
+│       │   ├── connection/  # Database connection
+│       │   ├── controller/  # Servlet controllers
+│       │   └── dao/         # Database operations
+│       └── webapp/          # JSP pages
+├── database/
+│   └── schema.sql           # Database setup
+└── pom.xml
+```
