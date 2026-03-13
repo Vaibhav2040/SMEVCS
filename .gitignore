@@ -1,0 +1,7 @@
+target/
+*.class
+*.war
+.DS_Store
+SMEVCS-1.0/
+inputFiles.lst
+pom.properties
